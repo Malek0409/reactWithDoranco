@@ -1,3 +1,5 @@
+import Button from "../../ui/button/button.jsx";
+
 const Player = () => {
   const score = 85;
 
@@ -6,6 +8,10 @@ const Player = () => {
   return (
     <div>
       <h1>Page du Joueur</h1>
+      <div>
+        <Button couleur="red">Supprimer</Button>
+        <Button couleur="green">Valider</Button>
+      </div>
 
       <h3>Statut du joueur</h3>
       <p>
