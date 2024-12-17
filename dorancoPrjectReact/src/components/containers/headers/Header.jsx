@@ -1,8 +1,8 @@
 const Header = () => {
   return (
     <header>
-      <h3>Hello word</h3>
-      <p>i am here guyssss</p>
+      <h1>Welcome to the User Info Page</h1>
+      <p>Explore user details and hobbies</p>
     </header>
   );
 };
