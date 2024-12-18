@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Children, useState } from "react";
 import Button from "../../ui/button/button";
 
 const Menu = () => {
@@ -17,21 +17,7 @@ const Menu = () => {
       >
         {isMenuOpen ? "Close" : "Open"}
       </Button>
-      {isMenuOpen && (
-        <div
-          style={{
-            backgroundColor: "gray",
-            border: "1px solid ",
-            padding: "10px",
-          }}
-        >
-          <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
-            <li style={{ padding: "5px 10px", cursor: "pointer" }}>task 1</li>
-            <li style={{ padding: "5px 10px", cursor: "pointer" }}>task 2</li>
-            <li style={{ padding: "5px 10px", cursor: "pointer" }}>task 3</li>
-          </ul>
-        </div>
-      )}
+      {isMenuOpen && <div>{Children}</div>}
     </div>
   );
 };
