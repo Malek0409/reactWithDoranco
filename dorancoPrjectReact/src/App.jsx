@@ -3,6 +3,7 @@ import Header from "./components/containers/headers/Header.jsx";
 import Footer from "./components/containers/footer/footer.jsx";
 import User from "./components/user/User.jsx";
 import Player from "./components/player/player.jsx";
+import Routine from "./components/routine/Routine.jsx";
 function App() {
   const userProps = {
     prenom: "Malek",
@@ -15,6 +16,7 @@ function App() {
       <main>
         <User {...userProps} />
         <Player />
+        <Routine />
       </main>
       <Footer />
     </>
