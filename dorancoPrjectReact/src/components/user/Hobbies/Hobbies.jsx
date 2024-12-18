@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 Hobbies.propTypes = {
   hobbies: PropTypes.array.isRequired,
@@ -6,16 +7,43 @@ Hobbies.propTypes = {
 };
 
 export default function Hobbies({ hobbies, couleur }) {
+  const [hobbyList, setHobbyList] = useState(hobbies);
+  const [newHobby, setNewHobby] = useState("");
+
+  const handleAddHobby = () => {
+    if (newHobby === "") {
+      alert("Le champ ne peut pas être vide !");
+      return;
+    }
+
+    setHobbyList([...hobbyList, newHobby]);
+    setNewHobby("");
+  };
+
+  function addHobby(e) {
+    setNewHobby(e.target.value);
+  }
+
   return (
     <div>
       <h3>Hobbies</h3>
       <ul>
-        {hobbies.map((hobby, index) => (
+        {hobbyList.map((hobby, index) => (
           <p key={index} style={{ color: couleur ? couleur : "black" }}>
             {hobby}
           </p>
         ))}
       </ul>
+
+      <div>
+        <input
+          type="text"
+          placeholder="Ajouter un hobby"
+          value={newHobby}
+          onChange={addHobby}
+        />
+        <button onClick={handleAddHobby}>Ajouter</button>
+      </div>
     </div>
   );
 }
