@@ -4,11 +4,16 @@ import Footer from "./components/containers/footer/footer.jsx";
 import User from "./components/user/User.jsx";
 import Player from "./components/player/player.jsx";
 function App() {
+  const userProps = {
+    prenom: "Malek",
+    nom: "KHADHRI",
+    hobbies: ["Reading", "Coding", "Traveling"],
+  };
   return (
     <>
       <Header />
       <main>
-        <User />
+        <User {...userProps} />
         <Player />
       </main>
       <Footer />
