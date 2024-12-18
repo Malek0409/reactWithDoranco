@@ -20,7 +20,7 @@ export default function Hobbies({ hobbies, couleur }) {
     setNewHobby("");
   };
 
-  function addHobby(e) {
+  function changeHobby(e) {
     setNewHobby(e.target.value);
   }
 
@@ -40,7 +40,7 @@ export default function Hobbies({ hobbies, couleur }) {
           type="text"
           placeholder="Ajouter un hobby"
           value={newHobby}
-          onChange={addHobby}
+          onChange={changeHobby}
         />
         <button onClick={handleAddHobby}>Ajouter</button>
       </div>
