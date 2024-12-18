@@ -1,4 +1,4 @@
-import ButtonRoutine from "../../ui/button/buttonRoutine";
+import Button from "../../ui/button/button";
 
 export default function Routine() {
   const handleClick = (action) => {
@@ -9,15 +9,15 @@ export default function Routine() {
     <div>
       <h3>Ma routine</h3>
       <div style={{ display: "flex", gap: "10px" }}>
-        <ButtonRoutine couleur="green" onClick={() => handleClick("manger")}>
+        <Button couleur="green" onClick={() => handleClick("manger")}>
           Manger
-        </ButtonRoutine>
-        <ButtonRoutine couleur="blue" onClick={() => handleClick("dormir")}>
+        </Button>
+        <Button couleur="blue" onClick={() => handleClick("dormir")}>
           Dormir
-        </ButtonRoutine>
-        <ButtonRoutine couleur="red" onClick={() => handleClick("étudier")}>
+        </Button>
+        <Button couleur="red" onClick={() => handleClick("étudier")}>
           Étudier
-        </ButtonRoutine>
+        </Button>
       </div>
     </div>
   );

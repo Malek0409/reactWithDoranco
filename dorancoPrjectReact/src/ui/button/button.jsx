@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   couleur: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
-export default function Button({ couleur, children }) {
+export default function Button({ couleur, children, onClick }) {
   console.log();
   return (
     <button
@@ -19,6 +20,7 @@ export default function Button({ couleur, children }) {
         borderRadius: "5px",
         cursor: "pointer",
       }}
+      onClick={onClick}
     >
       {children}
     </button>
