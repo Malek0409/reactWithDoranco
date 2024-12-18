@@ -5,6 +5,7 @@ import User from "./components/user/User.jsx";
 import Player from "./components/player/player.jsx";
 import Routine from "./components/routine/Routine.jsx";
 import Compteur from "./components/compteur/compteur.jsx";
+import Menu from "./components/menu/menu.jsx";
 function App() {
   const userProps = {
     prenom: "Malek",
@@ -19,6 +20,7 @@ function App() {
         <User {...userProps} />
         <Player />
         <Routine />
+        <Menu />
       </main>
       <Footer />
     </>
