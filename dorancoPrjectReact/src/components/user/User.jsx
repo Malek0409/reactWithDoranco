@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 User.propTypes = {
   prenom: PropTypes.string.isRequired,
   nom: PropTypes.string.isRequired,
-  hobbies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  hobbies: PropTypes.array.isRequired,
 };
 
 export default function User({ prenom, nom, hobbies }) {

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 Hobbies.propTypes = {
-  hobbies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  hobbies: PropTypes.array.isRequired,
   couleur: PropTypes.string,
 };
 

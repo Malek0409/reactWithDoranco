@@ -1,18 +1,18 @@
 import PropTypes from "prop-types";
+import FirstName from "./FirstName";
+import LastName from "./LastName";
 
 FullName.propTypes = {
   prenom: PropTypes.string.isRequired,
   nom: PropTypes.string.isRequired,
 };
 
-const FullName = ({ prenom, nom }) => {
+export default function FullName({ prenom, nom }) {
   return (
     <div>
       <h3>Full Name</h3>
-      <p style={{ color: "red" }}>First Name: {prenom}</p>
-      <p style={{ color: "green" }}>Last Name: {nom}</p>
+      <FirstName prenom={prenom} />
+      <LastName nom={nom} />
     </div>
   );
-};
-
-export default FullName;
+}
