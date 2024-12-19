@@ -1,13 +1,9 @@
-import PropTypes from "prop-types";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { userContext } from "../../../App";
 
-Hobbies.propTypes = {
-  hobbies: PropTypes.array.isRequired,
-  couleur: PropTypes.string,
-};
-
-export default function Hobbies({ hobbies, couleur }) {
-  const [hobbyList, setHobbyList] = useState(hobbies);
+export default function Hobbies() {
+  const user = useContext(userContext);
+  const [hobbyList, setHobbyList] = useState(user.hobbies);
   const [newHobby, setNewHobby] = useState("");
 
   const handleAddHobby = () => {
@@ -29,7 +25,10 @@ export default function Hobbies({ hobbies, couleur }) {
       <h3>Hobbies</h3>
       <ul>
         {hobbyList.map((hobby, index) => (
-          <p key={index} style={{ color: couleur ? couleur : "black" }}>
+          <p
+            key={index}
+            style={{ color: user.couleur ? user.couleur : "black" }}
+          >
             {hobby}
           </p>
         ))}

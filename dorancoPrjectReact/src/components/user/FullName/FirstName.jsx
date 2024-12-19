@@ -1,18 +1,16 @@
-import PropTypes from "prop-types";
+import { useContext } from "react";
+import { userContext } from "../../../App";
 
-FirstName.propTypes = {
-  prenom: PropTypes.string.isRequired,
-  couleur: PropTypes.string,
-};
+export default function FirstName() {
+  const user = useContext(userContext);
 
-export default function FirstName({ prenom, couleur }) {
   return (
     <p
       style={{
-        color: couleur ? couleur : "black",
+        color: user.couleur ? user.couleur : "black",
       }}
     >
-      First Name: {prenom}
+      First Name: {user.prenom}
     </p>
   );
 }
